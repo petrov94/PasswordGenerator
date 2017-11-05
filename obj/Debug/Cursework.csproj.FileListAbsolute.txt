@@ -1,0 +1,15 @@
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\bin\Debug\Cursework.exe.config
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\bin\Debug\Cursework.exe
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\bin\Debug\Cursework.pdb
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\MainWindow.g.cs
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\App.g.cs
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework_MarkupCompile.cache
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework_MarkupCompile.lref
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\MainWindow.baml
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.g.resources
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.Properties.Resources.resources
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.csproj.GenerateResource.Cache
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.exe
+c:\users\petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.pdb
+C:\Users\Petar\documents\visual studio 2015\Projects\Cursework\Cursework\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Petar\Documents\Visual Studio 2015\Projects\Cursework\Cursework\obj\Debug\Cursework.csprojResolveAssemblyReference.cache

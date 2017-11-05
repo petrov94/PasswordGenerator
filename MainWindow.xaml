@@ -1,0 +1,54 @@
+﻿<Window x:Class="Cursework.MainWindow"
+        xmlns:vm="clr-namespace:Cursework"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cursework"
+        mc:Ignorable="d"
+        Title="PASSWORD GENERATOR" Height="375.501" Width="590.353">
+
+    <Window.DataContext>
+        <vm:PasswordVM />
+    </Window.DataContext>
+
+    <StackPanel Margin="0,0,0,-1">
+        <Label x:Name="label1" Content="Enter the length of password" Margin="0,5,329,10"/>
+        <TextBox x:Name="textBox"  Height="24" TextWrapping="Wrap" Margin="10,0,0,5" RenderTransformOrigin="0.884,0.417" HorizontalAlignment="Left" Width="81" Text="{Binding Password_OBJ.Length}"/>
+        <TabControl Height="272">
+            <TabItem Header="Generate Passwords" Margin="10,0,-7,0">
+                <StackPanel Margin="0,3,2,-1">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="Symbols" Content="Symbols" Height="24" IsChecked="{Binding Password_OBJ.IsCheckedSymbol}" HorizontalAlignment="Right" Margin="10,10,0,0" Width="81"/>
+                        <CheckBox x:Name="Digits" Content="Digits" Height="24" IsChecked="{Binding Password_OBJ.IsCheckedNumbers}" HorizontalAlignment="Center" Width="81" Margin="50,10,0,0"/>
+                        <CheckBox x:Name="LowerLetters" Content="Lower Letters" IsChecked="{Binding Password_OBJ.IsCheckedLowerCase}"  HorizontalAlignment="Left" Height="24" Width="95" Margin="90,10,0,0"/>
+                        <CheckBox x:Name="UpperLetters" Content="Upper Letters" IsChecked="{Binding Password_OBJ.IsCheckedUpperCase}"  HorizontalAlignment="Left" Height="24" Width="97" Margin="60,10,0,0"/>
+                    </StackPanel>
+                    <Label x:Name="excludeinformation" Height="auto" HorizontalContentAlignment="Center" Content="Symbols to be excluded from password" Margin="10,18,329,0"/>
+                    <TextBox x:Name="exclude" Height="auto" HorizontalContentAlignment="Center" Text="{Binding Password_OBJ.Exclude}" Width="auto" Margin="250,-20,148,0"/>
+                    <TextBox x:Name="password" Height="auto" HorizontalContentAlignment="Center" Width="auto" IsReadOnly="true" Text="{Binding Password_OBJ.Outputtring}"  Margin="112,20,112,0"/>
+                    <Button x:Name="GeneretePassword" Content="Generate" Command="{Binding GenereteNewPasswordCommand}" Margin="95,25,95,5" Height="25"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Generete Simple Passwords" Margin="12,0,-11,0">
+                <StackPanel>
+                    <TextBox x:Name="label4" Height="auto" IsReadOnly="true" HorizontalContentAlignment="Center" Text="{Binding Password_OBJ.OutputtringInSimple}" Margin="184,30,190,0"/>
+                    <Button x:Name="button1" Content="Generate" Command="{Binding GenereteSimplePasswordCommand}" Margin="166,20,178,0"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Validate Password" Margin="12,0,-27,0">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox x:Name="checkBox1InValidation" IsChecked="{Binding Password_OBJ.IsCheckedSymbolInValidation}" Content="Symbols" Height="24" HorizontalAlignment="Right" Margin="10,10,0,0" Width="81"/>
+                        <CheckBox x:Name="checkBoxInValidation" IsChecked="{Binding Password_OBJ.IsCheckedNumbersInValidation}" Content="Digits" Height="24" HorizontalAlignment="Center" Width="81" Margin="50,10,0,0"/>
+                        <CheckBox x:Name="checkBox2InValidation" IsChecked="{Binding Password_OBJ.IsCheckedLowerCaseInValidation}" Content="Lower Letters"  HorizontalAlignment="Left" Height="24" Width="95" Margin="90,10,0,0"/>
+                        <CheckBox x:Name="checkBox3InValidation" IsChecked="{Binding Password_OBJ.IsCheckedUpperCaseInValidation}" Content="Upper Letters"  HorizontalAlignment="Left" Height="24" Width="97" Margin="60,10,0,0"/>
+                    </StackPanel>
+                    <TextBox x:Name="textBox2" Height="23" TextWrapping="Wrap" Text="{Binding Password_OBJ.Validation}" Margin="112,10,148,0"/>
+                    <Button x:Name="button2" Command="{Binding ValidatePasswordCommand}"  Content="Validate" Margin="99,15,128,0"/>
+                    <Label x:Name="label6" Height="auto" HorizontalContentAlignment="Center" Content="{Binding Password_OBJ.ValidationOutput}" Margin="126,20,105,0"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
+</Window>
